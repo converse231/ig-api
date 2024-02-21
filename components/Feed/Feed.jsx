@@ -19,10 +19,6 @@ function Feed({ data, index }) {
   const posts = data.data;
   const [modalActive, setModalActive] = useState(false);
 
-  function handleIconClick(externalLink) {
-    window.open(externalLink, "_blank");
-  }
-
   console.log(modalActive);
 
   useEffect(() => {
@@ -97,14 +93,7 @@ function Feed({ data, index }) {
               </div>
             </div>
             <div>
-              <button
-                onClick={() =>
-                  handleIconClick(
-                    "https://www.instagram.com/gelballundercover/"
-                  )
-                }
-                className="bg-red-500 px-4 py-2 rounded-lg text-white"
-              >
+              <button className="bg-red-500 px-4 py-2 rounded-lg text-white">
                 <div className="flex items-center gap-4">
                   <span>Checkout GBU</span>
                   <ExternalLink className="h-4 w-4" />
@@ -160,14 +149,7 @@ function Feed({ data, index }) {
               </div>
             </div>
             <div>
-              <button
-                onClick={() =>
-                  handleIconClick(
-                    "https://www.instagram.com/gelballundercover/"
-                  )
-                }
-                className="bg-red-500 px-4 py-2 rounded-lg text-white"
-              >
+              <button className="bg-red-500 px-4 py-2 rounded-lg text-white">
                 <div className="flex items-center gap-4">
                   <span>Checkout GBU</span>
                   <ExternalLink className="h-4 w-4" />
@@ -231,14 +213,7 @@ function Feed({ data, index }) {
               </div>
             </div>
             <div>
-              <button
-                onClick={() =>
-                  handleIconClick(
-                    "https://www.instagram.com/gelballundercover/"
-                  )
-                }
-                className="bg-red-500 px-4 py-2 rounded-lg text-white"
-              >
+              <button className="bg-red-500 px-4 py-2 rounded-lg text-white">
                 <div className="flex items-center gap-4">
                   <span>Checkout GBU</span>
                   <ExternalLink className="h-4 w-4" />
