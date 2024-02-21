@@ -157,7 +157,7 @@ function Feed({ data, index }) {
               </button>
             </div>
           </div>
-          <Carousel>
+          {/* <Carousel>
             <CarouselContent>
               {posts?.map((post, index) => (
                 <CarouselItem
@@ -193,7 +193,7 @@ function Feed({ data, index }) {
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
-          </Carousel>
+          </Carousel> */}
         </div>
         <div className="w-full my-10">
           <div className="flex my-5 justify-between items-center">
