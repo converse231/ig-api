@@ -1,6 +1,5 @@
 import Feed from "@/components/Feed/Feed";
 import { fetchPosts } from "@/lib/data";
-import Image from "next/image";
 
 export default async function Home() {
   const data = await fetchPosts();
