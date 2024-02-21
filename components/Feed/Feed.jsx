@@ -13,13 +13,10 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-function Feed({ data }) {
+function Feed({ data, index }) {
   const modalref = useRef(null);
   const router = useRouter();
   const posts = data.data;
-  const searchParams = useSearchParams();
-  const index = searchParams.get("index");
-  console.log(index);
   const [modalActive, setModalActive] = useState(false);
 
   function handleIconClick(externalLink) {
