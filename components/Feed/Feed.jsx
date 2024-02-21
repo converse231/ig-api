@@ -274,36 +274,6 @@ function Feed({ data, index }) {
             ))}
           </div>
         </div>
-        {/* <div className="w-[1000px] flex justify-center">
-        <Carousel>
-        <CarouselContent>
-        {posts?.map((post) => (
-          <CarouselItem
-          className="basis-1/3 rounded-md overflow-hidden"
-          key={post.id}
-          >
-          <div className="bg-blue-400">
-          <img
-          src={post.media_url}
-          class="object-cover h-[300px] w-full"
-          />
-          </div>
-          </CarouselItem>
-          ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-          </Carousel>
-          </div>
-          <div className="flex justify-center gap-2 flex-wrap w-[1200px]">
-          {posts?.map((post) => (
-            <img
-            key={post.id}
-            src={post.media_url}
-            class="object-cover h-[300px] w-[300px]"
-            />
-            ))}
-          </div> */}
       </div>
     </>
   );
