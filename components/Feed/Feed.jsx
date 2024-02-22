@@ -37,14 +37,18 @@ function Feed({ data, index }) {
   }
 
   function handleClick(index) {
-    router.push(`?index=${index}`, { scroll: false });
-    setModalActive(true);
+    if (posts && posts.length > index) {
+      // Check if posts is defined and has elements
+      router.push(`?index=${index}`, { scroll: false });
+      setModalActive(true);
+    }
   }
+
   return (
     <>
       {modalActive && (
         <div className="z-50 fixed w-screen h-screen bg-black/50 flex justify-center items-center overflow-x-hidden">
-          {posts[index]?.media_url.includes(".mp4") ? (
+          {posts && posts[index]?.media_url.includes(".mp4") ? ( // Check if posts is defined before accessing its elements
             <div ref={modalref} className="relative">
               <button
                 className="absolute p-5 z-50"
