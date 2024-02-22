@@ -16,7 +16,7 @@ import { useEffect, useRef, useState } from "react";
 function Feed({ data, index }) {
   const modalref = useRef(null);
   const router = useRouter();
-  const posts = data.data;
+  const posts = data?.data;
   const [modalActive, setModalActive] = useState(false);
 
   console.log(modalActive);
