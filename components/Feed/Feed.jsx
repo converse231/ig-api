@@ -32,6 +32,10 @@ function Feed({ data, index }) {
     document.addEventListener("mousedown", handler);
   });
 
+  if (!data) {
+    return <p>Loading...</p>;
+  }
+
   function handleClick(index) {
     router.push(`?index=${index}`, { scroll: false });
     setModalActive(true);
@@ -157,7 +161,7 @@ function Feed({ data, index }) {
               </button>
             </div>
           </div>
-          {/* <Carousel>
+          <Carousel>
             <CarouselContent>
               {posts?.map((post, index) => (
                 <CarouselItem
@@ -193,7 +197,7 @@ function Feed({ data, index }) {
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
-          </Carousel> */}
+          </Carousel>
         </div>
         <div className="w-full my-10">
           <div className="flex my-5 justify-between items-center">
