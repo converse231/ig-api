@@ -19,7 +19,8 @@ function Feed({ data, index }) {
   const posts = data?.data;
   const [modalActive, setModalActive] = useState(false);
 
-  console.log(modalActive);
+  console.log("Data:", data); // Log the data received from the API
+  console.log("Posts:", posts);
 
   useEffect(() => {
     let handler = (e) => {
@@ -30,7 +31,7 @@ function Feed({ data, index }) {
     };
 
     document.addEventListener("mousedown", handler);
-  });
+  }, [router]);
 
   if (!data) {
     return <p>Loading...</p>;
